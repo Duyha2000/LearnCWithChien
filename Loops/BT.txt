@@ -1,0 +1,79 @@
+https://docs.google.com/document/d/1pCQ_0_ez6xYZrkW1Z6fHZhW10koBOhvGmqc6yBo3_pw/edit?tab=t.0#heading=h.g7s63utnd1xh
+
+Bài 1:
+//    For - do while - while:
+    int n;
+    scanf("%d" , &n);
+//    for: start -> end -> step{
+//          code here
+//    }
+
+// Vòng lặp for - i
+// i sẽ tăng dần từ n -> 100 ( 90 91 92 ... 98 99 100)
+    for(int i = n ; i <= 100 ; i++){
+       if(i % 2 ==0){
+           printf("%d \t" , i);
+       }
+    }
+
+    //    BT3: nhập 2 số a b và in ra các số chia hết cho 3 5 nằm trong đoạn [a,b]
+    // from  1 -> to 50
+        int a , b; //
+        scanf("%d %d" , &a , &b);
+        for(int i = a ; i <= b ; i++){
+            if(i % 3 == 0 && i % 5 == 0){
+                printf("%d" , i);
+            }
+        }
+
+//    // Tính "tổng" các số từ 1 đến 5:
+//
+//    // sum = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8...
+//    // sum là 1 kho chứa để chưa các giá trị khi cộng dồn
+//    int sum = 0; // [...]     <- 1
+//    // i++ -> i += 1 -> i = 1 toán tử 1 ngôi
+//    // i = 1 -> i += 2 / i = i + 2 -> i = 3
+//    for(int i = 1 ; i <= 5; i++){
+////        i = 1 -> vứt số 1 vào kho chứa (store)
+//        sum += i;  // sum = 1 + 2 + 3 + 4 + 5
+//        // toán t + = cộng dồn các giá trị trong vòng for
+////                sum = sum +
+//    }
+//    printf("%d", sum);
+int multiply = 1;
+for(int i = 1 ; i <= 7 ; i++){
+    multiply *= i; // 1 * 2 * 3 * ... * 7
+}
+    printf("%d \t" , multiply);
+
+    return 0;
+}
+
+//    Nhap n -> hien thi ra so uoc cua no.
+
+//  n = 12 -> ước số là số mà 12 chia hết ( 1 , 2 , 3 , 4 , 6 , 12) -> count = 6
+// n = 8 -> 1  , 2 ,  4 , 8
+// i from 1 -> to n:
+
+int n = 12;
+int count = 0;
+for(int i = 1 ; i <= n ; i++){
+    // 12 : 6 == 0 -> 6 là 1 ước của 12
+    if(n % i == 0){
+        printf("%d \t" , i);
+        count++;
+    }
+}
+    printf("\nCó tất cả %d ước" , count);
+
+    // Đếm xem trong [A,B] có bao nhiêu số chia hết cho X
+        int a , b , x; // a = 1 | b = 50 | x = 5
+        int count = 0;
+        scanf("%d %d %d" , &a , &b , &x);
+        // i 1 -> 50
+        for(int i = a ; i <= b ; i++){
+            if(i % x == 0){
+                count++;
+            }
+        }
+        printf("%d",count);

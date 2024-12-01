@@ -1,0 +1,195 @@
+  // Vòng for: cần lặp đi lặp lại 1 công việc ( from - to)
+    // do while: lặp khi nào (forever) (menu chuwsc năng, validate)
+    // Chọn 1: Phở
+    // Chọn 2: Cafe
+    // Chọn 3: Pizza
+    // Chọn 4: Thoát
+    int choice;
+    do {
+        printf("Chào mừng bạn đến chương trình. Chọn các món ăn\n");
+        printf("1. Coke - 1.25$\n");
+        printf("2. Pepsi - 1$\n");
+        printf("3. Water - 1.5$\n");
+        printf("4. Exit\n");
+        printf("Nhập lựa chọn của bạn: ");
+        scanf("%d", &choice);
+        switch (choice) {
+            case 1:
+                printf("Chọn Coke");
+                break;
+            case 2:
+                printf("Chọn Pepsi");
+                break;
+            case 3:
+                printf("Water");
+                break;
+            case 4:
+                printf("Exit");
+                break;
+            default:
+                printf("Chọn 1 - 4");
+                break;
+        }
+    } while (choice != 4);
+    // while: lặp khi
+//    do {
+//
+//
+//    }
+
+ // 1. Kiểm tra số chẵn lẻ
+    // 2. Kiểm tra số nguyên tố
+    // 3.Kểm tra số có chia hết cho 3 hay không
+    int choice;
+
+    do {
+        printf("1. moi ban kiem tra so chan hoac le \n");
+        printf("2. moi ban kiem tra so nguyen to\n");
+        printf("3. moi ban kiem tra so chia het cho 3\n");
+        printf("4. exit \n");
+        printf("moi ban nhap lua chon");
+        scanf("%d", &choice);
+        switch (choice) {
+            case 1: {
+                int number;
+                printf("moi ban kiem tra so chan hoac le \n");
+                scanf("%d", &number);
+                if (number % 2 == 0) {
+                    printf("so chan");
+                } else {
+                    printf("so le");
+                }
+                break;
+            }
+            case 2: {
+//                Toán + Tiếng Anh ( Tiếng Anh) -> [cấu trúc dữ liệu giải thuật]
+                int n;
+                printf("moi ban kiem tra so nguyen to\n");
+                scanf("%d", &n); // 13
+                // n = 7 -> [2,6]
+                // n = 8 -> [2,7] ->
+                // [2 - 12]
+                // 8 : 8 => số nguyên tố
+                // 8 : 1 =>
+
+                // Input: ...
+                // Output: ...
+                // Số nguyên tố: chỉ chia hết cho 1 và chính nó, không chia hết cho số nào trong đoạn từ 1 đến chính nos
+                // [1000 : 1 1000 : 1000] [2 - 999]
+                for (int i = 2; i < n; i++) {
+                    if (n % i == 0) {
+                        printf("%d ko phải số nguyên tố", i);
+                    }
+                }
+                break;
+            }
+            case 3: {
+                int number1;
+                printf("moi ban kiem tra so chia het cho 3\n");
+                scanf("%d", &number1);
+                if (number1 % 3 == 0) {
+                    printf("so chia het cho 3");
+                } else {
+                    printf("ko phai la so chia het cho 3");
+                }
+                break;
+            }
+            case 4:
+                printf("Exit\n");
+                break;
+            default:
+                printf("moi ban chon 1-4");
+                break;
+        }
+
+    } while (choice != 4);
+
+     int choice;
+        do {
+            printf("1. tinh chu vi va dien tich hinh chu nhat \n");
+            printf("2. tinh chu vi va dien tich  hinh tam giac \n");
+            printf("3. tinh chu vi va dien tich hinh tron \n");
+            printf("4. Thoat \n");
+            printf("moi ban lua chon \n");
+            scanf("%d", &choice);
+            switch (choice) {
+                case 1: {
+                    int a, b;
+                    printf("Chon tinh chu vi va dien tich hinh chu nhat");
+                    scanf("%d %d", &a, &b);
+                    printf("chu vi hinh chu nhat la: %d \n", ((a + b) * 2));
+                    printf("dien tich hinh chu nhat la:%d \n", a * b);
+                    break;
+                }
+                case 2: {
+                    double c, d, f;
+                    printf("Chon tinh chu vi va dien tich hinh tam giac");
+                    scanf("%.2lf %f %f", &c, &d, &f);
+                    printf("chu vi hinh tam giac la%f", (c + d + f));
+                    double p = (c + d + f) / 2;
+                    printf("dien tich hinh tam giac la %.2lf", sqrt(p * (p - c) * (p - d) * (p - f)));
+                    break;
+                }
+                case 3: {
+                    double r, pi = 3.14;
+                    printf("Chon tinh chu vi va dien tich hình tron");
+                    scanf("%f", &r);
+                    printf("chu vi hinh tron la %.2lf", (2 * pi * r));
+                    printf("dien tich hinh tron %.2lf", (pi * r * r * r));
+                    break;
+                }
+                case 4: {
+                    printf("Thoat");
+                    break;
+                }
+                default: {
+                    printf("moi ban nhap lai");
+                    break;
+                }
+            }
+        } while (choice != 4);
+
+    // Admin:
+    // 1. Đăng nhập -> validate
+    // Tên đăng nhập
+    // Mật khẩu
+    // button: ăng nhập -> báo lỗi, tên đăng nhập phải lớn hơn 8 ký tự, tên đăng nhập không được bỏ trống
+    //
+
+    // 1.1 Xem các sinh viên
+    // 1.2 Thêm, sửa, xóa sinh viên
+    // 2. Đăng ký
+
+     // Điền trước 1 lần -> kiểm tra điều kiện có thỏa mãn age > 0 và nhỏ hơn 150, ếu không thỏa mãn phải nhập lại đến khi nào đúng thì thôi, còn không cứ lặp lại mãi
+    //    int age;
+    //    do {
+    //        printf("moi ban nhap so tuoi");
+    //        scanf("%d", &age);
+    //        if (age < 0 || age > 150) {
+    //            printf("moi ban nhap lai");
+    //        }
+    //    } while (age < 0 || age > 150);
+    //// lặp khi:
+    //    printf("%d", age);
+
+    //    Bài tập 2: Validate điểm số
+    //    Yêu cầu người dùng nhập một điểm số từ 0 đến 10. Nếu nhập sai, yêu cầu nhập lại. Nhập sai 5 lần sẽ báo bạn bị khóa tài khoản, không được nhập nữa
+    //    int number;
+    //    int count = 0;
+    //    do {
+    //        printf("moi ban nhap so");
+    //        scanf("%d", &number);
+    //        if (number > 10 || number < 0) {
+    //            printf("moi ban nhap lai");
+    //            count++;
+    //        }
+    //        if (count == 5) {
+    //            printf("ban da bi khoa tai khoan ");
+    //            break;
+    //        }
+    //    } while (number > 10 || number < 0);
+    ////    lặp khi:
+    //
+    //    if (number < 10 && number > 0) {
+    //        printf("%d", number);
+    //    }
